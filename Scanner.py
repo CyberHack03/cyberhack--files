@@ -14,7 +14,7 @@ response == input("""\nplease enter the type of scan you want to run
                 1)SYN ACK scan
                 2)UDP scan
                 3)Comprehensive scan \n """)
-print("you have selected option: ",response
+print("you have selected option: ",response)
 
 if response == '1':
     print("nmap version: ",scanner.nmap_version())
