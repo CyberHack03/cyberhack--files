@@ -2,7 +2,7 @@
 
 import nmap
 
-scanner = nmap.portscanner()
+scanner = nmap.PortScanner()
 
 print("welcome, this is a nmap automation tool")
 print(".......................................")
