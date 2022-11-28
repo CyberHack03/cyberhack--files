@@ -2,7 +2,7 @@
 
 import nmap
 
-Scanner = nmap.PortScanner
+Scanner = nmap.PortScanner()
 
 print("welcome, this is a nmap automation tool")
 print(".......................................")
@@ -16,8 +16,8 @@ scan = input("""\nplease enter the type of scan you want to run
                 3)Comprehensive scan \n """)
 
 if scan == '1':
-    print("nmap version: ",self,Scanner.nmap_version())
-    selfScanner.scan(ip_addr,'1-1024','-v -sS')
+    print("Nmap Version: ",Scanner.nmap_version())
+    Scanner.scan(ip_addr,'1-1024','-v -sS')
     print(Scanner.scaninfo())
     print("IP status: ",Scanner[ip_addr].state())
     print(Scanner[ip_addr].allprotocols())
