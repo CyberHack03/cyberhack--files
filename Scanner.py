@@ -16,7 +16,6 @@ scan = input("""\nplease enter the type of scan you want to run
                 3)Comprehensive scan \n """)
 
 if scan == '1':
-    print("nmap version: ",PortScanner.nmap_version())
     Scanner.scan(ip_addr,'1-1000','-v -sS')
     print(Scanner.scaninfo())
     print("IP status: ",Scanner[ip_addr].state())
