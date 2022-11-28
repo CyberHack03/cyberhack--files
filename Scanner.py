@@ -10,13 +10,13 @@ ip_addr = input("please enter the IP address you want to scan: ")
 print("The IP address you entered is:",ip_addr)
 type(ip_addr)
 
-resp == input("""\nplease enter the type of scan you want to run
+response == input("""\nplease enter the type of scan you want to run
                 1)SYN ACK scan
                 2)UDP scan
                 3)Comprehensive scan \n """)
-print("you have selected option: ",resp)
+print("you have selected option: ",response
 
-if resp == '1':
+if response == '1':
     print("nmap version: ",scanner.nmap_version())
     scanner.scan(ip_addr,'1-1000','-v -sS')
     print(scanner.scaninfo())
@@ -24,7 +24,7 @@ if resp == '1':
     print(scanner[ip_addr].allprotocols())
     print("open ports: ",scanner[ip_addr]['tcp'].keys())
 
-elif resp == '2':
+elif response == '2':
     print("nmap version: ",scanner.nmap_version())
     scanner.scan(ip_addr,'1-1000','-v -sU')
     print(scanner.scaninfo())
@@ -32,7 +32,7 @@ elif resp == '2':
     print(scanner[ip_addr].allprotocols())
     print("open ports: ",scanner[ip_addr]['udp'].keys())
 
-elif resp == '3':
+elif response== '3':
     print("nmap version: ",scanner.nmap_version())
     scanner.scan(ip_addr,'1-1000','-v -sS -sV -sC -A -O')
     print(scanner.scaninfo())
