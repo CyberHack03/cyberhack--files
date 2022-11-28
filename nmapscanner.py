@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import nmap
-
+scan = portscanner
 Scanner = nmap.PortScanner()
 
 print("welcome, this is a nmap automation tool")
